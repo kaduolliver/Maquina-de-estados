@@ -1,0 +1,26 @@
+test_p01_entrega_direta (test_maquina_estados.TesteCaminhos.test_p01_entrega_direta) ... ok
+test_p02_cancelamento_imediato (test_maquina_estados.TesteCaminhos.test_p02_cancelamento_imediato) ... ok
+test_p03_cancelamento_aguardando_pagamento (test_maquina_estados.TesteCaminhos.test_p03_cancelamento_aguardando_pagamento) ... ok
+test_p04_erro_e_retentativa (test_maquina_estados.TesteCaminhos.test_p04_erro_e_retentativa) ... ok
+test_estado_aguardando_pagamento (test_maquina_estados.TesteEstados.test_estado_aguardando_pagamento) ... ok
+test_estado_cancelado (test_maquina_estados.TesteEstados.test_estado_cancelado) ... ok
+test_estado_criado (test_maquina_estados.TesteEstados.test_estado_criado) ... ok
+test_estado_em_preparacao (test_maquina_estados.TesteEstados.test_estado_em_preparacao) ... ok
+test_estado_entregue (test_maquina_estados.TesteEstados.test_estado_entregue) ... ok
+test_estado_enviado (test_maquina_estados.TesteEstados.test_estado_enviado) ... ok
+test_evento_invalido_no_estado_inicial (test_maquina_estados.TesteRobustez.test_evento_invalido_no_estado_inicial) ... ok
+test_repetidas_falhas_de_pagamento (test_maquina_estados.TesteRobustez.test_repetidas_falhas_de_pagamento) ... ok
+test_termino_por_cancelamento_nao_aceita_eventos (test_maquina_estados.TesteRobustez.test_termino_por_cancelamento_nao_aceita_eventos) ... ok
+test_termino_por_entrega_nao_aceita_eventos (test_maquina_estados.TesteRobustez.test_termino_por_entrega_nao_aceita_eventos) ... ok
+test_t01_solicitar_pagamento (test_maquina_estados.TesteTransicoes.test_t01_solicitar_pagamento) ... ok
+test_t02_cancelar_pedido_criado (test_maquina_estados.TesteTransicoes.test_t02_cancelar_pedido_criado) ... ok
+test_t03_confirmar_pagamento (test_maquina_estados.TesteTransicoes.test_t03_confirmar_pagamento) ... ok
+test_t04_cancelar_pagamento_pendente (test_maquina_estados.TesteTransicoes.test_t04_cancelar_pagamento_pendente) ... ok
+test_t05_falha_de_pagamento (test_maquina_estados.TesteTransicoes.test_t05_falha_de_pagamento) ... ok
+test_t06_despachar (test_maquina_estados.TesteTransicoes.test_t06_despachar) ... ok
+test_t07_confirmar_entrega (test_maquina_estados.TesteTransicoes.test_t07_confirmar_entrega) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.001s
+
+OK

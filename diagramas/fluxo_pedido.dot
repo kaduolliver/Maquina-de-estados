@@ -1,0 +1,21 @@
+digraph PedidoDigital {
+    graph [rankdir=TB, bgcolor="transparent", pad=0.16, nodesep=0.55, ranksep=0.75, splines=true, fontname="DejaVu Sans", dpi=230];
+    node [shape=box, style="rounded,filled", fontname="DejaVu Sans", fontsize=12, penwidth=1.8, margin="0.18,0.12", fillcolor="#F0F6FF", color="#355C88", fontcolor="#132942"];
+    edge [fontname="DejaVu Sans", fontsize=10.5, arrowsize=0.75, color="#355C88", penwidth=1.6, fontcolor="#17385C"];
+    inicio [shape=point, width=0.12, fillcolor="#1B3755", color="#1B3755", label=""];
+    criado [label="CRIADO"];
+    aguardando [label="AGUARDANDO\nPAGAMENTO"];
+    preparacao [label="EM\nPREPARAÇÃO"];
+    enviado [label="ENVIADO"];
+    entregue [label="ENTREGUE", peripheries=2, fillcolor="#E7F7EC", color="#1D855A"];
+    cancelado [label="CANCELADO", peripheries=2, fillcolor="#FFF0EE", color="#B6504C"];
+    inicio -> criado [label="", color="#1B3755"];
+    criado -> aguardando [label="T1 · solicitar\npagamento"];
+    criado -> cancelado [label="T2 · cancelar", color="#B6504C", fontcolor="#A03E39", constraint=false];
+    aguardando -> preparacao [label="T3 · confirmar\npagamento"];
+    aguardando -> cancelado [label="T4 · cancelar", color="#B6504C", fontcolor="#A03E39", constraint=false];
+    aguardando -> aguardando [label="T5 · falha de\npagamento", color="#A46923", fontcolor="#925812"];
+    preparacao -> enviado [label="T6 · despachar"];
+    enviado -> entregue [label="T7 · confirmar\nentrega", color="#1D855A", fontcolor="#1A794F"];
+    { rank=same; criado; cancelado; }
+}
